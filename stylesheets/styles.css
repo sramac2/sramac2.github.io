@@ -1,1 +1,14 @@
+body{
+	background-image: url(../images/back.jpg);
+	font-family: sans-serif;
+}
+div.a{
+	text-align:center; 
+}
+tbody tr:nth-child(even)
+{
+  background: orange;
+}
+
+
 
