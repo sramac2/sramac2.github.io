@@ -9,6 +9,10 @@ tbody tr:nth-child(even)
 {
   background: orange;
 }
-
-
-
+a:hover{
+	 background-color: white;
+}
+span{
+	background-color: red;
+	font-weight: bold;
+}
