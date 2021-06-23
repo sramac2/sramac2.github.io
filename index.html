@@ -1,102 +1,69 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./stylesheets/styles.css" type="text/css">
-    <title>Santhosh's Info</title>
-  </head>
-  <body>
-    <div class="a">
-      <h1>Santhosh Ramachandran</h1>
-      <a href="http://www.cs.gsu.edu/"><span>GSU CS</span> department Home Page</a><br>
-      <br>
-      <img src="./images/santhosh.jpg" style="width:250px;height:350px;">
-    </div>
-    <br>
-    <table>
-      <tr>
-        <th>Class work Asignment</th>
-        <th>Home work Asignment</th>
-      </tr>
-      <tr>
-        <td><a href="https://codd.cs.gsu.edu/~sramachandran4/WP/CW/0/index.html">CW 0</a></td>
-        <td><a href="index.html">HW 1</a></td>
-      </tr>
-      <tr>
-        <td><a href="https://codd.cs.gsu.edu/~sramachandran4/WP/CW/1/index.html">CW 1</a></td>
-        <td><a href="dummy.html">HW 2</a></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 2</a></td>
-        <td><a href="dummy.html">HW 3</a></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 3</a></td>
-        <td><a href="dummy.html">HW 4</a></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 4</a></td>
-        <td><a href="dummy.html">HW 5</a></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 5</a></td>
-        <td><a href="dummy.html">HW 6</a></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 6</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 7</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="dummy.html">CW 8</a></td>
-        <td></td>
-      </tr>
-    </table>
-    <br><br>
-    <h2> Favorite Hobbies/Interests</h2>
-    <h4> Things to do</h4>
-    <ul>
-      <li>Playing badminton</li>
-      <li>Cooking</li>
-      <li>Playing video games</li>
-      <li>Playing board games</li>
-      <li>Hanging out</li>
-    </ul>
-    <h4> Favorite Items</h4>
-    <ul>
-      <li>Food: Biryani</li>
-      <li>Sport: Badminton</li>
-      <li>Console: Xbox One</li>
-    </ul>
-    <h2> Personal Information</h2>
-    <ul>
-      <li>
-        <h4> Education</h4>
-      </li>
-      <ul>
-        <li><span>Georgia State</span> University, BS in <span>Computer Science</span>. Started in 2019, Graduating in May 2021</li>
-        <li>Towson University, BS in <span>Computer Science</span>. Started in 2017, Transferred in 2019	</li>
-        <li>Dulaney High School, Graduated in 2017</li>
-      </ul>
-      <li>
-        <h4>Job History</h4>
-      </li>
-	  <ul>
-        <li>Undergraduate Teaching Assistant at GSU since Jan 2020</li>
-        <li>Android Developer Intern at Ezee info Solutions from Jan 2020 to Dec 2020</li>
-        <li>Quality Engineer Intern at Slalom Build from june 2020 to August 2020</li>
-		<li><span>Computer Science</span> tutor a GSU from Jan 2020 to May 2020.</li>
-      </ul>
-    </ul>
-	
-	<p>Favorite Quote: "The only way to do great work is to love what you do" - Steve Jobs</p>
-	<a href="https://www.linkedin.com/in/sram007/">Link to my LinkedIn account</a>
-	<br><br>
-	<a href="https://thetowerlight.com/tu-student-wins-hackumbc-creates-seizure-helper-app-as-epilepsy-aid/">Link to my accomplishment</a>
-	<br><br>
-	<a href="https://github.com/sramac2/">Link to my github account</a>
-	
-  </body>
+
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="654949069299-v8dnu89lg9a702c04u9jlho9due8n9h2.apps.googleusercontent.com">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="fan_page">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>fan_page</title>
+  <link rel="manifest" href="./web/manifest.json">
+</head>
+
+<body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDvNyuNgqtR9cZRqYAb9JRH-P3QzXOPMQk",
+      authDomain: "fanpage-a32c3.firebaseapp.com",
+      projectId: "fanpage-a32c3",
+      storageBucket: "fanpage-a32c3.appspot.com",
+      messagingSenderId: "654949069299",
+      appId: "1:654949069299:web:1deadec2817526d33aa286",
+      measurementId: "G-EN31P62MKL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1373530430');
+      });
+    }
+  </script>
+  <script src="./web/main.dart.js" type="application/javascript"></script>
+</body>
+
 </html>
